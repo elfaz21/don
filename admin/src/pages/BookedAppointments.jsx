@@ -123,7 +123,7 @@ const BookedAppointments = () => {
             className="mt-5 px-3 mx-20 py-2 border border-gray-300 rounded-md"
           />
           <div style={{ overflowX: "auto" }}>
-            <table className="min-w-[600px] sm:w-full xl:w-4/5 xl:mx-auto table-auto border-collapse border-spacing-4">
+            <table className="min-w-full sm:w-full xl:w-4/5 xl:mx-auto table-auto border-collapse border-spacing-4">
               <thead>
                 <tr className="border-b text-sm text-BlueBlackColor">
                   <th className="xl:px-10 lg:px-5 md:px-5 sm:px-5 xs:px-5 py-2">
