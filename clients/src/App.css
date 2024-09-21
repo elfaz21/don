@@ -1,0 +1,270 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  background-image: url("./Rectangle.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.hero-img,
+.middle-img {
+  width: 450px;
+}
+.appointment img {
+  width: 1500px !important;
+}
+/* Footer */
+footer {
+  background-image: url("./Rectangle 9.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hr {
+  border: none;
+  height: 1px; /* Adjust thickness */
+  background-color: #c1c0c0; /* Replace with your desired color */
+}
+/* About */
+.about-hero,
+.blog-hero,
+.banner {
+  background-image: linear-gradient(
+      rgba(75, 75, 75, 0.5),
+      rgba(69, 69, 69, 0.5)
+    ),
+    url("./about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* CSS for Contact Us form */
+/* .banner {
+    position: relative;
+    text-align: center;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  } */
+
+/* .banner h1 {
+    color: white;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the text is visible on top of the banner */
+/* padding: 10px 20px; */
+/* }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Decreased opacity */
+/* } */
+.main-header-texts {
+  text-align: center;
+  margin-bottom: 0; /* Add margin at the bottom */
+}
+.main-header-texts h1 {
+  color: #1e0176;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-align: center;
+  width: 400px;
+  position: relative;
+}
+
+.main-header-texts h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Adjust the distance of the underline from the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; /* Adjust the length of the underline as a percentage of the text width */
+  border-bottom: 4px solid #1e0176;
+}
+.main-header-texts p {
+  color: #000000;
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+  position: relative;
+}
+.contact-us-form {
+  margin-top: 0; /* Add margin at the bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.right form {
+  color: black;
+  border: none;
+  margin: 80px;
+}
+
+.right label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.right input,
+textarea {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(204, 204, 204, 0.7); /* Decreased opacity */
+  border-radius: 4px;
+}
+
+.right button {
+  background: #1e0176; /* Decreased opacity /
+      color: rgba(255, 255, 255, 0.9); / Decreased opacity */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.right button:hover {
+  background: black; /* Decreased opacity */
+}
+.buttons .hr {
+  width: 320px;
+}
+@media only screen and (min-width: 768px) {
+  /* For tablets */
+  .contact-us-form {
+    flex-direction: row;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+  }
+  .right form {
+    margin: 20px;
+  }
+  .getAppointmentImg {
+    width: 450px !important;
+    height: 250px !important ;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile devices */
+  .main-header-texts h1 {
+    font-size: 24px;
+  }
+  .right form {
+    margin: 20px;
+  }
+  .main-header-texts p {
+    font-size: 16px;
+  }
+
+  .right {
+    max-width: 100%;
+  }
+
+  .right button {
+    padding: 10px 15px;
+  }
+  .middle-img {
+    width: 400px;
+    margin-top: 40px;
+  }
+  .hero-img {
+    width: 350px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .middle-img {
+    width: 400px;
+    margin-top: 40px;
+  }
+  .hero-img {
+    width: 300px;
+  }
+  .hero {
+    background-image: url("./Rectangle.svg");
+    /* background-repeat: no-repeat; */
+    background-position: bottom;
+    background-size: cover !important;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .middle-img {
+    width: 350px;
+    margin: 15px auto;
+  }
+  .hero-img {
+    width: 200px;
+  }
+  .appointment img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* For smaller mobile devices */
+
+  .main-header-texts h1 {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 90%;
+  }
+  .right form {
+    margin: 20px;
+  }
+  .main-header-texts p {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .contact-us-form {
+    flex-direction: column;
+  }
+
+  .left {
+    text-align: center;
+  }
+  .right {
+    width: 100%;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .right button {
+    padding: 10px 15px;
+  }
+  .buttons .hr {
+    width: 300px;
+  }
+}
+/* Appointment */

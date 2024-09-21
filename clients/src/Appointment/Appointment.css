@@ -1,0 +1,46 @@
+.appointment-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.reusable-container h1 {
+  text-align: center;
+  color: #fff;
+}
+.white-text {
+  color: white;
+}
+.red-text {
+  color: red;
+}
+.appointment-container input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0ba52d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.appointment-container button:hover {
+  background-color: #0056b3;
+}
+
+.appointment-container .message {
+  text-align: center;
+  color: #ff0000;
+  margin-top: 10px;
+}

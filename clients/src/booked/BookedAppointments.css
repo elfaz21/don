@@ -1,0 +1,95 @@
+.booked-appointments-container {
+  margin: 100px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.booked-appointments-container h1 {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+
+.appointment-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.user-image {
+  width: 120px;
+  height: 170px;
+  border-radius: 15px;
+  margin-right: 30px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.appointment-details {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button.approved {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.pending {
+  background-color: #ff9800;
+  color: white;
+}
+/* BookedAppointments.css */
+
+.cancel-button {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  color: #000000; /* White */
+  padding: 0.35rem 1rem;
+  border: 1px solid #6d6d6d61;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #ffffff; /* Lighter shade of Coral on hover */
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 600px) {
+  .appointments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-image {
+    padding: 10px;
+  }
+  .cancel-button {
+    position: relative;
+    left: 200px;
+    bottom: 43px;
+  }
+}

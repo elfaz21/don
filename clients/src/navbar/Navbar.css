@@ -1,0 +1,143 @@
+/* Navbar.css */
+
+/* Navbar.css */
+
+.navbar-m {
+  margin: 20px auto 0; /* Added top margin to move it down slightly */
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 2px 0;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  border-radius: 10px;
+  width: 80%;
+  left: 50%; /* Move the navbar to the center */
+  transform: translateX(-50%); /* Center the navbar */
+  top: 0;
+
+  border-bottom: 1px solid #ffffff24;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-m {
+  height: 70px;
+  width: 200px;
+}
+
+.logo-img-m {
+  display: block;
+  height: 100%;
+}
+
+.nav-links-m {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-family: "Arial", sans-serif;
+  margin-left: auto; /* Push the navigation links to the right */
+}
+
+.nav-links-m a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links-m a:hover {
+  border-bottom: 2px solid #ffffff;
+}
+
+.auth-button-m {
+  background-image: linear-gradient(120deg, #020a7f, #000000);
+  color: #000;
+  width: 140px;
+  padding: 5px 8px;
+  border: 1px solid #8c8c8c;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-image 0.3s linear;
+}
+
+.auth-button-m:hover {
+  background-image: linear-gradient(120deg, #87b6e7, #020a7f);
+  border: none;
+}
+
+.profile-button-m {
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.profile-button-m img {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  padding: 2px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links-m {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .nav-links-m.open {
+    display: flex;
+  }
+
+  .nav-links-m li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .auth-button-m,
+  .profile-button-m {
+    margin: 10px 0;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 60px;
+    height: 13px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    background-color: green;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .hamburger.open {
+    transform: rotate(-45deg);
+  }
+}
