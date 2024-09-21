@@ -16,7 +16,7 @@ function Appointment() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:7000/api/users/${userId}`
+          `https://don-server-75q6.onrender.com/api/users/${userId}`
         );
         const data = await response.json();
         setUser(data);
@@ -44,18 +44,21 @@ function Appointment() {
     const formattedDate = scheduledDateTime.toLocaleString();
 
     try {
-      const response = await axios.post("http://localhost:7000/api/booked", {
-        treatment,
-        doctor,
-        scheduledDateTime: formattedDate,
-        scheduledDate,
-        scheduledTime,
-        approved: false,
-        userId: userId,
-        userName: user.name,
-        userImage: user.imageUrl,
-        phoneNo: user.phoneNo,
-      });
+      const response = await axios.post(
+        "https://don-server-75q6.onrender.com/api/booked",
+        {
+          treatment,
+          doctor,
+          scheduledDateTime: formattedDate,
+          scheduledDate,
+          scheduledTime,
+          approved: false,
+          userId: userId,
+          userName: user.name,
+          userImage: user.imageUrl,
+          phoneNo: user.phoneNo,
+        }
+      );
 
       setMessage("Appointment added successfully!"); // Update message state
       changeStep(3); // Update step to show the success message

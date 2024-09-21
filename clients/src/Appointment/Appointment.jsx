@@ -14,7 +14,7 @@ const Appointment = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:7000/api/users/${userId}`
+          `https://don-server-75q6.onrender.com/api/users/${userId}`
         );
         const data = await response.json();
         setUser(data);
@@ -41,16 +41,19 @@ const Appointment = () => {
     const time = scheduledDateTime.toTimeString().slice(0, 5);
 
     try {
-      const response = await axios.post("http://localhost:7000/api/booked", {
-        treatment,
-        doctor,
-        scheduledDate: formattedDate,
-        scheduledTime: time,
-        approved: false,
-        userId,
-        userName: user.name,
-        userImage: user.imageUrl,
-      });
+      const response = await axios.post(
+        "https://don-server-75q6.onrender.com/api/booked",
+        {
+          treatment,
+          doctor,
+          scheduledDate: formattedDate,
+          scheduledTime: time,
+          approved: false,
+          userId,
+          userName: user.name,
+          userImage: user.imageUrl,
+        }
+      );
 
       setMessage(response.data.message);
     } catch (error) {

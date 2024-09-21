@@ -11,7 +11,7 @@ function BlogDetail() {
     const fetchBlog = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:7000/api/blogs/${id}`
+          `https://don-server-75q6.onrender.com/api/blogs/${id}`
         );
         setBlog(response.data);
       } catch (error) {

@@ -11,7 +11,7 @@ const UserAppointments = () => {
     const fetchAppointments = async () => {
       try {
         const appointmentsResponse = await fetch(
-          "http://localhost:7000/api/booked"
+          "https://don-server-75q6.onrender.com/api/booked"
         );
         const allAppointments = await appointmentsResponse.json();
 
@@ -32,9 +32,12 @@ const UserAppointments = () => {
 
   const cancelAppointment = async (appointmentId) => {
     try {
-      await fetch(`http://localhost:7000/api/booked/${appointmentId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://don-server-75q6.onrender.com/api/booked/${appointmentId}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       const updatedAppointments = userAppointments.filter(
         (appointment) => appointment._id !== appointmentId

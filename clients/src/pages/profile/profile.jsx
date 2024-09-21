@@ -10,7 +10,7 @@ const ProfilePage = () => {
     const fetchData = async () => {
       try {
         const userResponse = await fetch(
-          `http://localhost:7000/api/users/${userId}`
+          `https://don-server-75q6.onrender.com/api/users/${userId}`
         );
         const userData = await userResponse.json();
         setUser(userData);

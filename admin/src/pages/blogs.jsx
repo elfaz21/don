@@ -111,7 +111,7 @@ function Blogs() {
           placeholder="Search by name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="mt-20 px-3 mx-20 py-2 border border-gray-300 rounded-md"
+          className="mt-20 px-3 mx-10 py-2 border border-gray-300 rounded-md"
         />
         <h1 className="text-3xl font-bold mb-4 mt-10 text-center">Blogs</h1>
         {loading ? (

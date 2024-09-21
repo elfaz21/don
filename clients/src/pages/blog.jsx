@@ -10,7 +10,9 @@ function Blog() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:7000/api/blogs/");
+        const response = await axios.get(
+          "https://don-server-75q6.onrender.com/api/blogs/"
+        );
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);

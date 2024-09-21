@@ -18,7 +18,7 @@ const UserEdit = () => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:7000/api/users/${userId}`
+          `https://don-server-75q6.onrender.com/api/users/${userId}`
         );
         const userData = response.data;
 
@@ -44,7 +44,7 @@ const UserEdit = () => {
   const handleUpdate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:7000/api/users/${userId}`
+        `https://don-server-75q6.onrender.com/api/users/${userId}`
       );
       const userData = response.data;
 
@@ -65,7 +65,7 @@ const UserEdit = () => {
         }
 
         await axios.put(
-          `http://localhost:7000/api/users/${userId}`,
+          `https://don-server-75q6.onrender.com/api/users/${userId}`,
           updatedData
         );
 

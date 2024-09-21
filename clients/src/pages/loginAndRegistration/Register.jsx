@@ -35,13 +35,16 @@ const UserRegistration = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:7000/api/users/", {
-        name,
-        phoneNo,
-        email,
-        password,
-        imageUrl,
-      });
+      const response = await axios.post(
+        "https://don-server-75q6.onrender.com/api/users/",
+        {
+          name,
+          phoneNo,
+          email,
+          password,
+          imageUrl,
+        }
+      );
 
       const newUser = response.data.user;
       const userId = newUser._id;

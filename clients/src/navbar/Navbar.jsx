@@ -28,7 +28,7 @@ const Navbar = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:7000/api/users/${userId}`
+          `https://don-server-75q6.onrender.com/api/users/${userId}`
         );
         if (response.ok) {
           const data = await response.json();

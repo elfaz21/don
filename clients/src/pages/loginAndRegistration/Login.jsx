@@ -17,10 +17,13 @@ const Login = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:7000/api/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://don-server-75q6.onrender.com/api/login",
+        {
+          email,
+          password,
+        }
+      );
 
       if (response.data) {
         setIsLoggedIn(true);
