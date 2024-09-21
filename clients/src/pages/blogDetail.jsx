@@ -39,10 +39,6 @@ function BlogDetail() {
       <div className="px-4 py-8 lg:px-20 xl:px-40">
         {blog && (
           <>
-            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8">
-              {blog.blogTitle}
-            </h2>
-
             <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-12">
               <div className="lg:w-1/2">
                 <img
