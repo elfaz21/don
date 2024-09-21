@@ -120,7 +120,7 @@ const BookedAppointments = () => {
             placeholder="Search by name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="mt-5 px-3 mx-20 py-2 border border-gray-300 rounded-md"
+            className="mt-5 px-3 mx-10 py-2 border border-gray-300 rounded-md"
           />
           <div style={{ overflowX: "auto" }}>
             <table className="min-w-full sm:w-full xl:w-4/5 xl:mx-auto table-auto border-collapse border-spacing-4">
