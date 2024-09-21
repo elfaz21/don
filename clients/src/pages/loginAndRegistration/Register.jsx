@@ -51,8 +51,8 @@ const UserRegistration = () => {
 
       setUserId(userId);
       setIsLoggedIn(true);
-      navigate("/signIn");
-      setMessage(response.data.message);
+      navigate("/");
+      setMessage("registration successful");
     } catch (error) {
       setMessage(error.response.data.message);
     }

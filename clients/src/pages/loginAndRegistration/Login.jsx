@@ -69,11 +69,11 @@ const Login = () => {
         >
           Sign In
         </button>
-        <p className="text-right mt-4">
+        {/* <p className="text-right mt-4">
           <Link to="/forgot-password" className="text-blue-500">
             Forgot Password?
           </Link>
-        </p>
+        </p> */}
         <div className="text-center mt-4">
           <p className="text-white">
             Don't have an account
