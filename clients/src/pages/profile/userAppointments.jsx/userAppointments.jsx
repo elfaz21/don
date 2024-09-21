@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../../context/Context";
-import "./UserAppointments.css";
 
 const UserAppointments = () => {
   const [userAppointments, setUserAppointments] = useState([]);
