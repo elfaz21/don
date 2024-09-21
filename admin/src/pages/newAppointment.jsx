@@ -47,17 +47,20 @@ function NewAppointment() {
     const formattedDate = scheduledDateTime.toLocaleString();
 
     try {
-      const response = await axios.post("http://localhost:7000/api/booked", {
-        treatment,
-        doctor,
-        scheduledDate,
-        scheduledTime,
-        approved: false,
-        userId,
-        userName,
-        userImage: imageUrl,
-        phoneNo,
-      });
+      const response = await axios.post(
+        "https://don-server-75q6.onrender.com/api/booked",
+        {
+          treatment,
+          doctor,
+          scheduledDate,
+          scheduledTime,
+          approved: false,
+          userId,
+          userName,
+          userImage: imageUrl,
+          phoneNo,
+        }
+      );
 
       setMessage("Appointment added successfully!");
     } catch (error) {

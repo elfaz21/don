@@ -49,7 +49,7 @@ function NewBlog() {
   const sendData = async (payload) => {
     try {
       const response = await axios.post(
-        "http://localhost:7000/api/blogs",
+        "https://don-server-75q6.onrender.com/api/blogs",
         payload
       );
 

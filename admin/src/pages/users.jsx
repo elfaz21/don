@@ -13,7 +13,9 @@ const UserLists = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:7000/api/users");
+        const response = await axios.get(
+          "https://don-server-75q6.onrender.com/api/users"
+        );
         setUsers(response.data.reverse());
       } catch (error) {
         console.error("Error fetching users: ", error);
@@ -35,7 +37,9 @@ const UserLists = () => {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:7000/api/users/${userId}`);
+      await axios.delete(
+        `https://don-server-75q6.onrender.com/api/users/${userId}`
+      );
       setUsers(users.filter((user) => user._id !== userId));
     } catch (error) {
       console.error("Error deleting user: ", error);

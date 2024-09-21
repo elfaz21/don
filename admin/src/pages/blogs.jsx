@@ -31,7 +31,9 @@ function Blogs() {
 
   const getBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:7000/api/blogs");
+      const response = await axios.get(
+        "https://don-server-75q6.onrender.com/api/blogs"
+      );
       setBlogs(response.data);
       setLoading(false);
     } catch (error) {
@@ -60,7 +62,7 @@ function Blogs() {
   const handleEditSubmit = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:7000/api/blogs/${editBlog._id}`,
+        `https://don-server-75q6.onrender.com/api/blogs/${editBlog._id}`,
         editedData
       );
       console.log("Blog updated successfully:", response.data);
@@ -74,7 +76,7 @@ function Blogs() {
   const handleDeleteSubmit = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:7000/api/blogs/${deleteBlog._id}`
+        `https://don-server-75q6.onrender.com/api/blogs/${deleteBlog._id}`
       );
       console.log("Blog deleted successfully:", response.data);
       setDeleteModalVisible(false);

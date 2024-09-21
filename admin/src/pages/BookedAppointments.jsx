@@ -12,7 +12,9 @@ const BookedAppointments = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await axios.get("http://localhost:7000/api/booked");
+        const response = await axios.get(
+          "https://don-server-75q6.onrender.com/api/booked"
+        );
         setAppointments(response.data.reverse());
       } catch (error) {
         console.error("Error fetching appointments: ", error);
@@ -27,7 +29,7 @@ const BookedAppointments = () => {
   const handleToggleApproval = async (id, currentStatus) => {
     try {
       const response = await axios.put(
-        `http://localhost:7000/api/booked/${id}`,
+        `https://don-server-75q6.onrender.com/api/booked/${id}`,
         {
           approved: !currentStatus,
         }
@@ -47,7 +49,9 @@ const BookedAppointments = () => {
 
   const handleCancelAppointment = async (id) => {
     try {
-      await axios.delete(`http://localhost:7000/api/booked/${id}`);
+      await axios.delete(
+        `https://don-server-75q6.onrender.com/api/booked/${id}`
+      );
 
       setAppointments((prevAppointments) =>
         prevAppointments.filter((appointment) => appointment._id !== id)
@@ -83,7 +87,7 @@ const BookedAppointments = () => {
     if (deleteAppointmentId) {
       try {
         await axios.delete(
-          `http://localhost:7000/api/booked/${deleteAppointmentId}`
+          `https://don-server-75q6.onrender.com/api/booked/${deleteAppointmentId}`
         );
 
         setAppointments((prevAppointments) =>

@@ -10,7 +10,7 @@ const DashboardCards = () => {
     const fetchUserData = async () => {
       try {
         const usersResponse = await axios.get(
-          "http://localhost:7000/api/users"
+          "https://don-server-75q6.onrender.com/api/users"
         );
         setUserCount(usersResponse.data.length);
       } catch (error) {
@@ -21,7 +21,7 @@ const DashboardCards = () => {
     const fetchAppointmentsData = async () => {
       try {
         const bookedResponse = await axios.get(
-          "http://localhost:7000/api/booked"
+          "https://don-server-75q6.onrender.com/api/booked"
         );
 
         const approvedAppointments = bookedResponse.data.filter(
