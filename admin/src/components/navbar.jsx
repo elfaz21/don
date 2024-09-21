@@ -13,12 +13,11 @@ function SideBar() {
     navigate("/");
   };
   return (
-    <div className="fixed top-0 left-0 h-18 w-64 bg-white z-50 overflow-y-auto">
+    <div className="fixed top-0 left-0 h-18 bg-white z-50 overflow-y-auto">
       <div className="p-4">
         <Link to="/dashboard" className="flex items-center">
-          <img src="./logo.png" className="w-14" alt="" />
           <h1 className="text-BlueBlackColor text-sm font-bold ml-2">
-            Don Dental Clinic
+            Don Dental
           </h1>
         </Link>
       </div>
