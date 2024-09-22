@@ -52,7 +52,7 @@ const UserRegistration = () => {
       setUserId(userId);
       setIsLoggedIn(true);
       navigate("/");
-      setMessage("registration successful");
+      setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);
     }
@@ -114,6 +114,7 @@ const UserRegistration = () => {
             </Link>
           </p>
         </div>
+
         {message && <p className="text-red-500 text-sm mt-4">{message}</p>}
       </div>
     </div>
