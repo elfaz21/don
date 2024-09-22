@@ -112,7 +112,7 @@ const createUser = async (req, res) => {
 
   try {
     const user = await User.create(req.body);
-    res.status(200).json(user);
+    res.status(200).json({ message: "User created successfully", user });
   } catch (error) {
     if (error.code === 11000 && error.keyPattern && error.keyPattern.email) {
       res.status(400).json({
@@ -124,7 +124,6 @@ const createUser = async (req, res) => {
     }
   }
 };
-
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find({});
